@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    /* Brand colors - SkoleMate */
+    --brand-primary: 14 100% 51%;  /* #FF3A09 */
+    --brand-secondary: 30 100% 70%;  /* #FFB766 */
+    
+    /* Primary - using brand primary */
+    --primary: 14 100% 51%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary - green for secondary buttons */
+    --secondary: 142 48% 65%;  /* Green from design */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Feature card colors */
+    --feature-mint: 150 40% 88%;  /* Light mint green */
+    --feature-coral: 10 85% 80%;   /* Light coral pink */
+    --feature-orange: 35 100% 80%; /* Light orange yellow */
+    --feature-blue: 210 70% 85%;   /* Light blue */
+
+    /* State colors */
+    --info: 217 79% 56%;      /* #2F80ED */
+    --success: 142 52% 51%;   /* #27AE60 */
+    --warning: 45 73% 55%;    /* #E2B93B */
+    --error: 5 82% 63%;       /* #EB5757 */
+
+    /* Gray scale */
+    --gray-1: 0 0% 20%;       /* #333333 */
+    --gray-2: 0 0% 31%;       /* #4F4F4F */
+    --gray-3: 0 0% 51%;       /* #828282 */
+    --gray-4: 0 0% 74%;       /* #BDBDBD */
+    --gray-5: 0 0% 88%;       /* #E0E0E0 */
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 51%;
+
+    --accent: 14 100% 51%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 5 82% 63%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 14 100% 51%;
+
+    --radius: 2rem;
+
+    /* Interactive states */
+    --hover: 210 100% 12%;     /* Dark navy for hover */
+    --active: 0 0% 51%;        /* Gray for active */
+
+    /* Transitions */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 100%;
+    --primary: 14 100% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 142 48% 65%;
+    --secondary-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-lato antialiased;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  /* Typography scale based on design system */
+  h1, h2, h3, h4, h5, h6 {
+    @apply break-words;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  h1 {
+    @apply text-[32px] leading-[38px] md:text-[44px] md:leading-[50px] lg:text-[56px] lg:leading-[61.6px] font-bold font-lato;
+  }
+
+  h2 {
+    @apply text-[28px] leading-[34px] md:text-[38px] md:leading-[44px] lg:text-[48px] lg:leading-[52.8px] font-bold font-lato;
+  }
+
+  h3 {
+    @apply text-[24px] leading-[30px] md:text-[32px] md:leading-[38px] lg:text-[40px] lg:leading-[44px] font-bold font-lato;
+  }
+
+  h4 {
+    @apply text-[22px] leading-[28px] md:text-[26px] md:leading-[32px] lg:text-[32px] lg:leading-[35.2px] font-bold font-lato;
+  }
+
+  h5 {
+    @apply text-[20px] leading-[26px] md:text-[22px] md:leading-[28px] lg:text-[24px] lg:leading-[26.4px] font-semibold font-lato;
+  }
+
+  h6 {
+    @apply text-[18px] leading-[24px] md:text-[19px] md:leading-[24px] lg:text-[20px] lg:leading-[22px] font-semibold font-lato;
+  }
+
+  /* Links use Lato font */
+  a {
+    @apply font-lato;
+  }
+
+  /* Body text styles */
+  .text-large {
+    @apply text-[20px] leading-[28px];
+  }
+
+  .text-medium {
+    @apply text-[18px] leading-[25.2px];
+  }
+
+  .text-normal {
+    @apply text-[16px] leading-[22.4px];
+  }
+
+  .text-small {
+    @apply text-[14px] leading-[19.6px];
+  }
+
+  /* Animations */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+}
+
+/* Aurora flap - animated green northern lights border */
+@keyframes aurora-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.aurora-flap {
+  padding: 6px;
+  background: linear-gradient(
+    135deg,
+    #00ff88,
+    #00cc66,
+    #0fa968,
+    #2dd4bf,
+    #34d399,
+    #10b981,
+    #84cc16,
+    #00ff88
+  );
+  background-size: 400% 400%;
+  animation: aurora-shift 6s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.5), 0 0 40px rgba(16, 185, 129, 0.3);
+}
+
+.aurora-flap-left {
+  padding-left: 0;
+}
+
+.aurora-flap-right {
+  padding-right: 0;
+}
+
+.aurora-flap-inner {
+  display: block;
+  background: #15803d;
+  border-radius: 0.6rem 0 0 0.6rem;
+  padding: 2.5rem 3rem;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.aurora-flap-right .aurora-flap-inner {
+  border-radius: 0 0.6rem 0.6rem 0;
+}
+
+.aurora-flap-inner-vertical {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  padding: 3rem 1.75rem;
+}
+
+
+.aurora-flap:hover .aurora-flap-inner {
+  background: #166534;
+}
+
+.aurora-modal {
+  padding: 6px;
+  background: linear-gradient(
+    135deg,
+    #00ff88,
+    #00cc66,
+    #0fa968,
+    #2dd4bf,
+    #34d399,
+    #10b981,
+    #84cc16,
+    #00ff88
+  );
+  border-radius: 0.75rem;
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.4), 0 0 60px rgba(16, 185, 129, 0.25);
+}
+
+.aurora-modal-inner {
+  background: hsl(var(--background));
+  border-radius: 0.55rem;
+  max-height: calc(90vh - 12px);
+  overflow-y: auto;
+}
+
+

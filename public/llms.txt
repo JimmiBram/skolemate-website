@@ -1,0 +1,46 @@
+# SkoleMate - Hele skolens AI-assistent
+
+> SkoleMate er en dansk AI-platform designet specifikt til skoler. Vi hjælper lærere med at spare tid på forberedelse og elever med at lære bedre - alt sammen med fokus på europæisk datasikkerhed.
+
+## Hvad er SkoleMate?
+
+SkoleMate er en AI-assistent til grundskoler og gymnasier i Danmark. Platformen er bygget med fokus på pædagogisk værdi og datasikkerhed, og benytter den europæiske AI-model Mistral fra Frankrig.
+
+## Hovedfunktioner
+
+### For lærere
+- **Lektionsplanlægning**: Generér lektionsplaner tilpasset Fælles Mål og læseplaner
+- **Materialeudvikling**: Opret differentierede undervisningsmaterialer
+- **Evaluering**: Hjælp til at lave opgaver og evalueringsværktøjer
+
+### For elever
+- **Læringsassistent**: Vejledning uden at give færdige svar
+- **Studiehjælp**: Støtte til at forstå svære emner
+- **Skrivevejledning**: Hjælp til at strukturere opgaver
+
+## Datasikkerhed
+
+- Europæisk AI-model (Mistral AI, Frankrig)
+- GDPR-compliant
+- Data forbliver i EU
+- Ingen træning på brugerdata
+- UNI-Login integration
+
+## Priser
+
+- Gratis prøveperiode på 30 dage
+- Månedlige og årlige abonnementer
+- Skolerabatter ved flere licenser
+
+## Kontakt
+
+- Website: https://skolemate.dk
+
+## Links
+
+- Funktionalitet: /funktionalitet
+- Priser: /priser
+- Om os: /om-os
+- Visionen: /visionen
+- Blog: /blog
+- Datasikkerhed: /datasikkerhed
