@@ -2,10 +2,10 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import ForSalePopup from "./components/ForSalePopup";
 import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
 import Privatlivspolitik from "./pages/Privatlivspolitik";
 import Brugsvilkaar from "./pages/Brugsvilkaar";
 import Cookiepolitik from "./pages/Cookiepolitik";
@@ -22,6 +22,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import KampagneDanmark from "./pages/KampagneDanmark";
 import TilmeldingWebinar from "./pages/TilmeldingWebinar";
+import SalgAfSkoleMate from "./pages/SalgAfSkoleMate";
 
 const queryClient = new QueryClient();
 
@@ -50,9 +51,11 @@ const App = () => (
           <Route path="/vilkaar-og-betingelser" element={<VilkaarOgBetingelser />} />
           <Route path="/kampagne/danmark" element={<KampagneDanmark />} />
           <Route path="/tilmelding-webinar" element={<TilmeldingWebinar />} />
+          <Route path="/salg" element={<SalgAfSkoleMate />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        <ForSalePopup />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

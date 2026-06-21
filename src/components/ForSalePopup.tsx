@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
@@ -56,14 +57,13 @@ const ForSalePopup = () => {
             </p>
             <p>
               Læs mere her:{" "}
-              <a
-                href="https://skolemate.notion.site/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/salg"
+                onClick={() => setOpen(false)}
                 className="text-primary underline"
               >
-                https://skolemate.notion.site/
-              </a>
+                Læs mere om salget af SkoleMate
+              </Link>
             </p>
             <p>Del gerne opslaget med nogen, der kunne være den rette køber.</p>
             <div className="flex justify-end pt-2">

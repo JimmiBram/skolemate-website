@@ -11,7 +11,6 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import StructuredData from "@/components/StructuredData";
-import ForSalePopup from "@/components/ForSalePopup";
 
 const Index = () => {
   return (
@@ -32,7 +31,6 @@ const Index = () => {
         </main>
         <Footer />
         <CookieBanner />
-        <ForSalePopup />
       </div>
     </>
   );
